@@ -36,10 +36,10 @@ descripcion varchar(256) null,
 drop table Vehiculo
 GO
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
-VALUES ('BMW','M340i XDribe','azul', 652, $15000, 5, 'Motor 4 cilindros 2400 Vidrios electricos Combustible Desiel 4x4')
+VALUES ('BMW','M340i XDrive','azul', 652, $15000, 5, 'Motor 4 cilindros 2400 Vidrios electricos Combustible Desiel 4x4')
 
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
-VALUES ('Fort','Mustang GT','Rojo', 787, $27205, 3, 'Aceleración 0 a 100 km: 4 s')
+VALUES ('Ford','Mustang GT','Rojo', 787, $27205, 3, 'Aceleración 0 a 100 km: 4 s')
 
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
 VALUES ('Chevrolet ','Camaro SS','Negro', 985, $1148400, 3, '455 CABALLOS DE POTENCIA, TRANSMISIÓN AUTOMÁTICADE 10 VELOCIDADES')
