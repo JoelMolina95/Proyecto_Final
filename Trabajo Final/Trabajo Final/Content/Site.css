@@ -24,6 +24,7 @@ textarea {
 }
 
 
+
 .caja1 {
     position: relative;
     top: 11px;
@@ -33,13 +34,13 @@ textarea {
 }
 
 .caja2 {
-    top: -378px;
+    top: -375px;
     left: 330px;
     position: relative;
 }
 
 .caja3 {
-    top: -780px;
+    top: -765px;
     left: 660px;
     position: relative;
 }
@@ -60,6 +61,13 @@ textarea {
 .cajaa6 {
     top: -1496px;
     left: 660px;
+    right: 0px;
+    position: relative;
+}
+
+.cajaa7 {
+    top: -1430px;
+    left: 0px;
     right: 0px;
     position: relative;
 }
@@ -85,6 +93,13 @@ textarea {
 .goku {
     top: 42px;
     left: 20px;
+    right: 0px;
+    position: absolute;
+}
+
+.Stock {
+    top: 0px;
+    left:-30px;
     right: 0px;
     position: absolute;
 }

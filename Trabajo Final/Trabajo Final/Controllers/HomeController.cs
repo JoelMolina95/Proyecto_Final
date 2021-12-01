@@ -27,7 +27,7 @@ namespace Trabajo_Final.Controllers
             return View();
         }
 
-        public ActionResult Compra()
+        public ActionResult DatosUsuario()
         {
             ViewBag.Message = "Your contact page.";
 

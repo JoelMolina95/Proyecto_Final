@@ -18,7 +18,7 @@
                 <p class="card-text">455 Caballos de potencia, Transmision automatica de 10 velocidades.</p>
 
                 <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Compra", "Home", new { area = "" }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Comprar", "DatosUsuario", "Home", new { area = "" }, new { @class = "btn btn-success" })
                 </div>
 
                 <p> </p>
@@ -38,15 +38,15 @@
 <section>
 
     <div class="caja2">
-        <div class="card" style="width: 18.9rem;">
+        <div class="card" style="width: 20.9rem;">
             <div class="card-body">
 
-                <img src="~/images/Ferrari-Enzo.jpg" width="267" class="d-block w-40" alt="...">
+                <img src="~/images/Ferrari-Enzo.jpg" width="267" height="178">
                 <h5 class="card-title">Ferrari-Enzo</h5>
                 <h6 class="list-group-item">Precio: $2,640,000 </h6>
                 <p class="card-text">Velocidad máxima: 336 km/h, Consumo de combustible: 3,4 km/l en ciudad y 5,1 km/l en ruta</p>
                 <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Compra", "Home", new { area = "" }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Comprar", "DatosUsuario", "Home", new { area = "" }, new { @class = "btn btn-success" })
                 </div>
 
                 <p> </p>
@@ -64,16 +64,16 @@
 <section>
 
     <div class="caja3">
-        <div class="card" style="width: 18.9rem;">
+        <div class="card" style="width: 24.9rem;">
             <div class="card-body">
 
-                <img src="~/images/Lamborghini-Aventador-Coupé.jpg" width="267" class="d-block w-40" alt="...">
+                <img src="~/images/Lamborghini-Aventador-Coupé.jpg" width="267" height="179">
                 <h5 class="card-title">Lamborghini-Aventador-Coupé</h5>
                 <h6 class="list-group-item">Precio: $422,290 </h6>
-                <p class="card-text">Tiene un motor V12 de gasolina de 770 CV, un cambio automático de siete relaciones, 0 a 100 km: 2.9s</p>
+                <p class="card-text">Tiene un motor V12 de gasolina de 770 CV,un cambio automático de siete relaciones 0 a 100 km: 2.9s</p>
 
                 <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Compra", "Home", new { area = "" }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Comprar", "DatosUsuario", "Home", new { area = "" }, new { @class = "btn btn-success" })
                 </div>
 
                 <p> </p>
@@ -100,7 +100,7 @@
                 <p class="card-text">Tiene un motor de 533 caballos de potencia, tracción trasera y caja de cambios automática.</p>
 
                 <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Compra", "Home", new { area = "" }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Comprar", "DatosUsuario", "Home", new { area = "" }, new { @class = "btn btn-success" })
                 </div>
 
                 <p> </p>
@@ -121,13 +121,13 @@
         <div class="card" style="width: 18.9rem;">
             <div class="card-body">
 
-                <img src="~/images/nissan-gtr.jpg" width="267" class="d-block w-40" alt="...">
+                <img src="~/images/nissan-gtr.jpg" width="267" height="150">
                 <h5 class="card-title">Nissan-GTR</h5>
                 <h6 class="list-group-item">Precio: $113,540 </h6>
                 <p class="card-text">Motor V6 DOHC turbocargado doble de 3.8 litros y 24 válvulas, con transmisión integrante de eje transversal independiente </p>
 
                 <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Compra", "Home", new { area = "" }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Comprar", "DatosUsuario", "Home", new { area = "" }, new { @class = "btn btn-success" })
                 </div>
 
                 <p> </p>
@@ -145,7 +145,7 @@
 <section>
 
     <div class="cajaa6">
-        <div class="card" style="width: 18.9rem;">
+        <div class="card" style="width: 20.9rem;">
             <div class="card-body">
 
                 <img src="~/images/Audi-R8.jpg" width="267" height="150" />
@@ -154,12 +154,39 @@
                 <p class="card-text">El Audi R8 cuenta con un motor V10 de 5.2 litros con el que alcanza una velocidad máxima de 330 km/h. Sistema de frenado Nissan/Brembo  </p>
 
                 <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Compra", "Home", new { area = "" }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Comprar", "DatosUsuario", "Home", new { area = "" }, new { @class = "btn btn-success" })
                 </div>
 
                 <p> </p>
 
                 <form action="https://www.motor16.com/coche/audi-r8/">
+                    <button type="submit">Mas información</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="cajaa7">
+        <div class="card" style="width: 20.9rem;">
+            <div class="card-body">
+
+                <img src="~/images/Tesla.jpg" width="267" height="150" />
+                <h5 class="card-title">Tesla - Model 3 eléctrico</h5>
+                <h6 class="list-group-item">Precio: $49,000 </h6>
+                <p class="card-text">Un manejo y aerodinámica mejorados permiten que se alcance una velocidad máxima de 261 km/h </p>
+
+                <div class="nav-item">
+                    @Html.ActionLink("Comprar", "DatosUsuario", "Home", new { area = "" }, new { @class = "btn btn-success" })
+                </div>
+
+                <p> </p>
+
+                <form action="https://www.tesla.com/es_mx/model3?redirect=no">
                     <button type="submit">Mas información</button>
                 </form>
             </div>

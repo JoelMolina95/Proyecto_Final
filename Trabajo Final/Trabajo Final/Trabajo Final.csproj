@@ -138,6 +138,7 @@
     <Compile Include="Models\detalle_factura.cs">
       <DependentUpon>SPeedRacer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\SPeedRacer.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,6 +185,7 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\max.jpg" />
     <Content Include="Images\nissan-gtr.jpg" />
+    <Content Include="Images\Tesla.jpg" />
     <Content Include="Models\SPeedRacer.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SPeedRacer.Context.cs</LastGenOutput>
@@ -229,7 +231,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Autos.cshtml" />
-    <Content Include="Views\Home\Compra.cshtml" />
+    <Content Include="Views\Home\DatosUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
