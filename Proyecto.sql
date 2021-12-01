@@ -12,6 +12,14 @@ direccion varchar(100) not null,
 telefono int not null, 
 email varchar(50) not null
 );
+insert into Cliente values('Jose Mauricio','Torres Hernandez','Chalatenango','3ra Avenida Sur',66998855,'Josetrrs@gmail.com')
+insert into Cliente values('Monica Alejandra','Flores Lemus','Chalatenango','Av Libertad',74952903,'Moniclemus@gmail.com')
+insert into Cliente values('Francisco Javier','Gutierrez Benitez','Chalatenango','Av. Luciano Morales',34759210,'Javibntz@gmail.com')
+insert into Cliente values('Felix Ricardo','Ochoa Morales','Chalatenango','6a Avenida Sur',23490185,'Felixochoa@gmail.com')
+insert into Cliente values('Maria Eugenia','Benitez Lopez','Chalatenango','C. a Colonia San Francisco',56910429,'Maribntz@gmail.com')
+insert into Cliente values('Bryan Jose','Torres Rodriguez','Chalatenango','Av Liberta',39185029,'Bryantorres@gmail.com')
+
+select *from Cliente
 
 drop table Cliente
 
