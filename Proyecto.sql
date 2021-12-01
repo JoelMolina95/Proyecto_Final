@@ -33,10 +33,10 @@ precio_venta money,
 stock integer not null,
 descripcion varchar(256) null,
 );
-
+drop table Vehiculo
 GO
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
-VALUES ('Hilux','4X4 Standard','Negro', 652, $15000, 5, 'Motor 4 cilindros 2400 Vidrios electricos Combustible Desiel 4x4')
+VALUES ('BMW','M340i XDribe','azul', 652, $15000, 5, 'Motor 4 cilindros 2400 Vidrios electricos Combustible Desiel 4x4')
 
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
 VALUES ('Fort','Mustang GT','Rojo', 787, $27205, 3, 'Aceleración 0 a 100 km: 4 s')
