@@ -177,14 +177,18 @@
     <Content Include="Images\1366_2000.jpg" />
     <Content Include="Images\Audi-R8.jpg" />
     <Content Include="Images\Banner.jpeg" />
+    <Content Include="Images\BMW 340i.jpg" />
     <Content Include="Images\Camaro-SS.jpg" />
     <Content Include="Images\Ferrari-Enzo.jpg" />
+    <Content Include="Images\Ferrary 612.png" />
+    <Content Include="Images\ford Mustang.jpg" />
     <Content Include="Images\Ford-Mustang-GT.jpg" />
     <Content Include="Images\goku.png" />
     <Content Include="Images\Lamborghini-Aventador-Coupé.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\max.jpg" />
     <Content Include="Images\nissan-gtr.jpg" />
+    <Content Include="Images\tesla-model-3.jpg" />
     <Content Include="Images\Tesla.jpg" />
     <Content Include="Models\SPeedRacer.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
