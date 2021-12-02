@@ -2,6 +2,8 @@ Create database SPEED_RACER
 
 use SPEED_RACER
 
+select *from Cliente
+
 
 create table Cliente(
 id_Cliente int primary key identity (1,1)not null,
@@ -9,16 +11,30 @@ nombres varchar(50) not null,
 apellidos varchar(50)not null,
 departamento varchar (50) not null,
 direccion varchar(100) not null,
-telefono int not null, 
-email varchar(50) not null
+telefono int unique not null,
+email varchar(50) not null,
+num_tarjeta bigint  not null,
+CVV int not null,
+fecha_vencimiento text,
 );
-insert into Cliente values('Jose Mauricio','Torres Hernandez','Chalatenango','3ra Avenida Sur',66998855,'Josetrrs@gmail.com')
-insert into Cliente values('Monica Alejandra','Flores Lemus','Chalatenango','Av Libertad',74952903,'Moniclemus@gmail.com')
-insert into Cliente values('Francisco Javier','Gutierrez Benitez','Chalatenango','Av. Luciano Morales',34759210,'Javibntz@gmail.com')
-insert into Cliente values('Felix Ricardo','Ochoa Morales','Chalatenango','6a Avenida Sur',23490185,'Felixochoa@gmail.com')
-insert into Cliente values('Maria Eugenia','Benitez Lopez','Chalatenango','C. a Colonia San Francisco',56910429,'Maribntz@gmail.com')
-insert into Cliente values('Bryan Jose','Torres Rodriguez','Chalatenango','Av Liberta',39185029,'Bryantorres@gmail.com')
 
+INSERT INTO Cliente (nombres,apellidos,departamento,direccion,telefono,email,num_tarjeta,CVV,fecha_vencimiento)
+VALUES ('Jose Mauricio','Torres Hernandez','Chalatenango','3ra Avenida Sur',66998855,'Josetrrs@gmail.com',1847291840283749,285,'12/01/2030')
+
+INSERT INTO Cliente (nombres,apellidos,departamento,direccion,telefono,email,num_tarjeta,CVV,fecha_vencimiento)
+VALUES('Monica Alejandra','Flores Lemus','Chalatenango','Av Libertad',74952903,'Moniclemus@gmail.com',2817493840194837,392,'22/12/2030')
+
+INSERT INTO Cliente (nombres,apellidos,departamento,direccion,telefono,email,num_tarjeta,CVV,fecha_vencimiento)
+VALUES('Francisco Javier','Gutierrez Benitez','Chalatenango','Av. Luciano Morales',34759210,'Javibntz@gmail.com',2819309058490291,291,'12/06/2030')
+
+INSERT INTO Cliente (nombres,apellidos,departamento,direccion,telefono,email,num_tarjeta,CVV,fecha_vencimiento)
+VALUES('Felix Ricardo','Ochoa Morales','Chalatenango','6a Avenida Sur',23490185,'Felixochoa@gmail.com',0019283758493019,209,'31/12/2030')
+
+INSERT INTO Cliente (nombres,apellidos,departamento,direccion,telefono,email,num_tarjeta,CVV,fecha_vencimiento)
+VALUES('Maria Eugenia','Benitez Lopez','Chalatenango','C. a Colonia San Francisco',56910429,'Maribntz@gmail.com',1890284938172930,193,'26/11/2030')
+
+INSERT INTO Cliente (nombres,apellidos,departamento,direccion,telefono,email,num_tarjeta,CVV,fecha_vencimiento)
+VALUES('Bryan Jose','Torres Rodriguez','Chalatenango','Av Liberta',39185029,'Bryantorres@gmail.com',8958651009987654,150,'13/06/2030')
 
 create table Vehiculo(
 IdVehiculo integer primary key identity(1,1) not null,
@@ -30,7 +46,6 @@ precio_venta money,
 stock int not null,
 descripcion varchar(256) null,
 );
-
 GO
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
 VALUES ('Chevrolet ','Camaro SS','Negro', 985, $1148400, 3, '455 Caballos de potencia, Transmision automatica de 10 velocidades.')
@@ -73,8 +88,6 @@ impuesto decimal (4,2) not null,
 total decimal (11,2) not null,
 FOREIGN KEY (idCliente) REFERENCES Cliente (id_Cliente)
 );
-
-
 
 create table detalle_factura(
 idDetalle_venta integer primary key identity (1,1),
