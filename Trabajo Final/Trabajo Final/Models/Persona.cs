@@ -11,13 +11,20 @@ namespace Trabajo_Final.Models
 
         public String Apellido { get; set; }
 
-        public String Contr { get; set; }
+        public String Contra { get; set; }
+
+        public String Telefono { get; set; }
+
+        public String email { get; set; }
 
         public String Tarjeta { get; set; }
 
+        public String Codigo { get; set; }
+
         public String Vencimiento{ get; set; }
 
-        public String Codigo { get; set; }
+
+
 
     }
 }

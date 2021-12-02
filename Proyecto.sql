@@ -62,7 +62,6 @@ VALUES ('BMW','M340i XDrive','azul', 652, $15000, 5, 'Caja automática de ocho ve
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
 VALUES ('Ford ','Mustang Shelby GT500','Azul', 789, $2415000, 1, 'Ford Shelby GT500 monta un potente Motor 5.2L V8 Supercargado de 760HP que entrega la aceleración más rápida en un Mustang de calle. ¡Ponte al volante y libera el poder de este icono de los Muscle Car Americanos!')
 
-
 GO
 
 create table Venta(
