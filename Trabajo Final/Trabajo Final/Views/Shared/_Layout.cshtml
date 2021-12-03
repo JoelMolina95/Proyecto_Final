@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
@@ -9,7 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body style="background-color: #AAA6A6;">
-     
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,10 +21,12 @@
                 @Html.ActionLink("SPEED RACER", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+
+
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Politicas", "About", "Home")</li>
-                    <li>@Html.ActionLink("Vehiculos", "Autos", "Home")</li>
+                    <li>@Html.ActionLink("Vehiculos", "Autos", "Carros")</li>
                 </ul>
             </div>
         </div>
@@ -42,4 +44,5 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
 

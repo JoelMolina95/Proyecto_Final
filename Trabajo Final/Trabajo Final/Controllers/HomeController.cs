@@ -20,18 +20,5 @@ namespace Trabajo_Final.Controllers
             return View();
         }
 
-        public ActionResult Autos()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult DatosUsuario()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
