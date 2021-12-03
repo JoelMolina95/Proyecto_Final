@@ -28,6 +28,9 @@ namespace Trabajo_Final.Models
         public string direccion { get; set; }
         public int telefono { get; set; }
         public string email { get; set; }
+        public decimal num_tarjeta { get; set; }
+        public int CVV { get; set; }
+        public string fecha_vencimiento { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<detalle_factura> detalle_factura { get; set; }

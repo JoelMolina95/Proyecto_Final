@@ -24,7 +24,7 @@ namespace Trabajo_Final.Models
         public string Marca { get; set; }
         public string modelo { get; set; }
         public string color { get; set; }
-        public int Serial { get; set; }
+        public int NumSerial { get; set; }
         public Nullable<decimal> precio_venta { get; set; }
         public int stock { get; set; }
         public string descripcion { get; set; }

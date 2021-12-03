@@ -1,8 +1,7 @@
 Create database SPEED_RACER 
 
 use SPEED_RACER
-
-
+ 
 create table Cliente(
 id_Cliente int primary key identity (1,1)not null,
 nombres varchar(50) not null,
@@ -11,9 +10,9 @@ departamento varchar (50) not null,
 direccion varchar(100) not null,
 telefono int unique not null,
 email varchar(50) not null,
-num_tarjeta bigint  not null,
+num_tarjeta decimal unique  not null,
 CVV int not null,
-fecha_vencimiento date,
+fecha_vencimiento varchar (50),
 );
 
 
@@ -31,7 +30,7 @@ descripcion varchar(256) null,
 GO
 
 GO
-
+ 
 create table Venta(
 idVenta int primary key identity(1,1) not null,
 idCliente int not null,

@@ -1,0 +1,50 @@
+﻿@model Trabajo_Final.Models.Persona
+
+@{
+    ViewData["Title"] = "DatosUsuario";
+}
+<h1>POR FAVOR INTRUDUZCA SUS DATOS</h1>
+
+@using (Html.BeginForm("DatosUsuario", "Persona", FormMethod.Post))
+{
+
+
+    <label>Nombre</label>
+    <br />
+    @Html.TextBoxFor(a => a.Nombre)
+    <br />
+
+    <label>Apellido</label>
+    <br />
+    @Html.TextBoxFor(a => a.Apellido)
+    <br />
+
+    <label>email</label>
+    <br />
+    @Html.TextBoxFor(a => a.email)
+    <br />
+
+    <label>Telefono</label>
+    <br />
+    @Html.TextBoxFor(a => a.Telefono)
+    <br />
+
+    <label>Tarjeta de credito</label>
+    <br />
+    @Html.TextBoxFor(a => a.Tarjeta)
+    <br />
+
+    <label>Codigo</label>
+    <br />
+    @Html.TextBoxFor(a => a.CVV)
+    <br />
+
+    <label>Fecha de vencimiento</label>
+    <br />
+    @Html.TextBoxFor(a => a.vencimiento)
+    <br />
+
+
+    <button type="submit">pagar</button>
+
+}
