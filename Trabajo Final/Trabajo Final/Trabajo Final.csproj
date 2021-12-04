@@ -129,7 +129,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CarrosController.cs" />
-    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -147,7 +146,6 @@
     <Compile Include="Models\Venta.cs">
       <DependentUpon>SPeedRacer.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ViewsModels\Persona.cs" />
     <Compile Include="Models\SPeedRacer.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -235,7 +233,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Carros\Autos.cshtml" />
-    <Content Include="Views\Cliente\DatosUsuario.cshtml" />
     <Content Include="Views\Clientes\Create.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
   </ItemGroup>

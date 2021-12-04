@@ -47,8 +47,8 @@ INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcio
 VALUES ('Ferrari ','612 Scaglietti','Negro', 652, $240952, 2, 'con un motor de gasolina, una cilindrada de 5,7 l y 540 CV de potencia. Caja de cambios automática de seis velocidades de tracción trasera, alcanza una velocidad de 320 km/h y acelerar de 0 a 100 km/h en 4,2 segundos.')
 
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
-VALUES ('BMW','M340i XDrive','azul', 652, $15000, 5, 'Caja automática de ocho velocidades, con convertidor de par. Tracción integral permanente. Acelera de 0 a 100 km/h en 4,4 segundos y su velocidad máxima está limitada a 250 km/h.')
+VALUES ('BMW','M340i XDrive','azul', 652, $83422, 5, 'Caja automática de ocho velocidades, con convertidor de par. Tracción integral permanente. Acelera de 0 a 100 km/h en 4,4 segundos y su velocidad máxima está limitada a 250 km/h.')
 
 INSERT INTO Vehiculo (Marca,modelo,color,NumSerial,precio_venta,stock,descripcion)
-VALUES ('Ford ','Mustang Shelby GT500','Azul', 789, $2415000, 1, 'Ford Shelby GT500 monta un potente Motor 5.2L V8 Supercargado de 760HP que entrega la aceleración más rápida en un Mustang de calle. ¡Ponte al volante y libera el poder de este icono de los Muscle Car Americanos!')
+VALUES ('Ford ','Mustang Shelby GT500','Azul', 789, $73995, 1, 'Ford Shelby GT500 monta un potente Motor 5.2L V8 Supercargado de 760HP que entrega la aceleración más rápida en un Mustang de calle. ¡Ponte al volante y libera el poder de este icono de los Muscle Car Americanos!')
 GO
