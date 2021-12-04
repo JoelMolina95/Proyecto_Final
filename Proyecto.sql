@@ -1,6 +1,13 @@
 Create database SPEED_RACER 
 
 use SPEED_RACER
+
+select *from Cliente 
+
+drop table detalle_factura 
+drop table venta 
+drop table Cliente 
+
  
 create table Cliente(
 id_Cliente int primary key identity (1,1)not null,
@@ -10,7 +17,7 @@ departamento varchar (50) not null,
 direccion varchar(100) not null,
 telefono int unique not null,
 email varchar(50) not null,
-num_tarjeta decimal unique  not null,
+num_tarjeta decimal  not null,
 CVV int not null,
 fecha_vencimiento varchar (50),
 );
