@@ -155,6 +155,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SPeedRacer.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>SPeedRacer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Vehiculo.cs">
       <DependentUpon>SPeedRacer.tt</DependentUpon>
     </Compile>

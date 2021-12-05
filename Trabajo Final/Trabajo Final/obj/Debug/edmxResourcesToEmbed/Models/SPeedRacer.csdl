@@ -3,9 +3,10 @@
   <EntityContainer Name="SPEED_RACEREntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Cliente" EntityType="SPEED_RACERModel.Cliente" />
     <EntitySet Name="detalle_factura" EntityType="SPEED_RACERModel.detalle_factura" />
+    <EntitySet Name="sysdiagrams" EntityType="SPEED_RACERModel.sysdiagrams" />
     <EntitySet Name="Vehiculo" EntityType="SPEED_RACERModel.Vehiculo" />
     <EntitySet Name="Venta" EntityType="SPEED_RACERModel.Venta" />
-    <AssociationSet Name="FK__detalle_f__idPer__2F10007B" Association="SPEED_RACERModel.FK__detalle_f__idPer__2F10007B">
+    <AssociationSet Name="FK__detalle_f__idPer__33D4B598" Association="SPEED_RACERModel.FK__detalle_f__idPer__33D4B598">
       <End Role="Cliente" EntitySet="Cliente" />
       <End Role="detalle_factura" EntitySet="detalle_factura" />
     </AssociationSet>
@@ -13,11 +14,11 @@
       <End Role="Cliente" EntitySet="Cliente" />
       <End Role="Venta" EntitySet="Venta" />
     </AssociationSet>
-    <AssociationSet Name="FK__detalle_f__idArt__2E1BDC42" Association="SPEED_RACERModel.FK__detalle_f__idArt__2E1BDC42">
+    <AssociationSet Name="FK__detalle_f__idArt__32E0915F" Association="SPEED_RACERModel.FK__detalle_f__idArt__32E0915F">
       <End Role="Vehiculo" EntitySet="Vehiculo" />
       <End Role="detalle_factura" EntitySet="detalle_factura" />
     </AssociationSet>
-    <AssociationSet Name="FK__detalle_f__idVen__2D27B809" Association="SPEED_RACERModel.FK__detalle_f__idVen__2D27B809">
+    <AssociationSet Name="FK__detalle_f__idVen__31EC6D26" Association="SPEED_RACERModel.FK__detalle_f__idVen__31EC6D26">
       <End Role="Venta" EntitySet="Venta" />
       <End Role="detalle_factura" EntitySet="detalle_factura" />
     </AssociationSet>
@@ -36,7 +37,7 @@
     <Property Name="num_tarjeta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="CVV" Type="Int32" Nullable="false" />
     <Property Name="fecha_vencimiento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idPer__2F10007B" FromRole="Cliente" ToRole="detalle_factura" />
+    <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idPer__33D4B598" FromRole="Cliente" ToRole="detalle_factura" />
     <NavigationProperty Name="Venta" Relationship="SPEED_RACERModel.FK__Venta__idCliente__2A4B4B5E" FromRole="Cliente" ToRole="Venta" />
   </EntityType>
   <EntityType Name="detalle_factura">
@@ -49,10 +50,19 @@
     <Property Name="idPersona" Type="Int32" Nullable="false" />
     <Property Name="cantidad" Type="Int32" Nullable="false" />
     <Property Name="precio" Type="Decimal" Nullable="false" Precision="11" Scale="2" />
-    <Property Name="descuento" Type="Decimal" Nullable="false" Precision="11" Scale="2" />
-    <NavigationProperty Name="Cliente" Relationship="SPEED_RACERModel.FK__detalle_f__idPer__2F10007B" FromRole="detalle_factura" ToRole="Cliente" />
-    <NavigationProperty Name="Vehiculo" Relationship="SPEED_RACERModel.FK__detalle_f__idArt__2E1BDC42" FromRole="detalle_factura" ToRole="Vehiculo" />
-    <NavigationProperty Name="Venta" Relationship="SPEED_RACERModel.FK__detalle_f__idVen__2D27B809" FromRole="detalle_factura" ToRole="Venta" />
+    <NavigationProperty Name="Cliente" Relationship="SPEED_RACERModel.FK__detalle_f__idPer__33D4B598" FromRole="detalle_factura" ToRole="Cliente" />
+    <NavigationProperty Name="Vehiculo" Relationship="SPEED_RACERModel.FK__detalle_f__idArt__32E0915F" FromRole="detalle_factura" ToRole="Vehiculo" />
+    <NavigationProperty Name="Venta" Relationship="SPEED_RACERModel.FK__detalle_f__idVen__31EC6D26" FromRole="detalle_factura" ToRole="Venta" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Vehiculo">
     <Key>
@@ -66,7 +76,7 @@
     <Property Name="precio_venta" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="stock" Type="Int32" Nullable="false" />
     <Property Name="descripcion" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idArt__2E1BDC42" FromRole="Vehiculo" ToRole="detalle_factura" />
+    <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idArt__32E0915F" FromRole="Vehiculo" ToRole="detalle_factura" />
   </EntityType>
   <EntityType Name="Venta">
     <Key>
@@ -79,9 +89,9 @@
     <Property Name="impuesto" Type="Decimal" Nullable="false" Precision="4" Scale="2" />
     <Property Name="total" Type="Decimal" Nullable="false" Precision="11" Scale="2" />
     <NavigationProperty Name="Cliente" Relationship="SPEED_RACERModel.FK__Venta__idCliente__2A4B4B5E" FromRole="Venta" ToRole="Cliente" />
-    <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idVen__2D27B809" FromRole="Venta" ToRole="detalle_factura" />
+    <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idVen__31EC6D26" FromRole="Venta" ToRole="detalle_factura" />
   </EntityType>
-  <Association Name="FK__detalle_f__idPer__2F10007B">
+  <Association Name="FK__detalle_f__idPer__33D4B598">
     <End Type="SPEED_RACERModel.Cliente" Role="Cliente" Multiplicity="1" />
     <End Type="SPEED_RACERModel.detalle_factura" Role="detalle_factura" Multiplicity="*" />
     <ReferentialConstraint>
@@ -105,7 +115,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__detalle_f__idArt__2E1BDC42">
+  <Association Name="FK__detalle_f__idArt__32E0915F">
     <End Type="SPEED_RACERModel.Vehiculo" Role="Vehiculo" Multiplicity="1" />
     <End Type="SPEED_RACERModel.detalle_factura" Role="detalle_factura" Multiplicity="*" />
     <ReferentialConstraint>
@@ -117,7 +127,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__detalle_f__idVen__2D27B809">
+  <Association Name="FK__detalle_f__idVen__31EC6D26">
     <End Type="SPEED_RACERModel.Venta" Role="Venta" Multiplicity="1" />
     <End Type="SPEED_RACERModel.detalle_factura" Role="detalle_factura" Multiplicity="*" />
     <ReferentialConstraint>
