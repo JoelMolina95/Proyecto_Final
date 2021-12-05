@@ -1,0 +1,13 @@
+﻿@model List<Trabajo_Final.Models.Vehiculo>
+@{
+    ViewBag.Title = "carros";
+}
+
+<h2>carros</h2>
+
+@foreach(var racer in Model)
+            {
+              <tr>
+                  <td> @racer.Marca </td>
+                  </tr>
+            }

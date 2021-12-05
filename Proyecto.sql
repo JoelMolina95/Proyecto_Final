@@ -29,7 +29,7 @@ auto-incrementomademas se agragaron lo que son los atributos y otras
 caracteristicas*/
 
 create table Vehiculo(
-IdVehiculo integer primary key identity(1,1) not null,
+IdVehiculo int primary key identity(1,1) not null,
 Marca varchar(50) not null,
 modelo varchar(50) not null,
 color varchar (50) not null, 
@@ -38,6 +38,8 @@ precio_venta money,
 stock int not null,
 descripcion varchar(256) null,
 );
+
+select *from Vehiculo
 
 select *from Cliente
 
