@@ -12,17 +12,12 @@ namespace Trabajo_Final.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class detalle_factura
+    public partial class sysdiagrams
     {
-        public int idDetalle_venta { get; set; }
-        public int idVenta { get; set; }
-        public int idArticulo { get; set; }
-        public int idPersona { get; set; }
-        public int cantidad { get; set; }
-        public decimal precio { get; set; }
-    
-        public virtual Cliente Cliente { get; set; }
-        public virtual Vehiculo Vehiculo { get; set; }
-        public virtual Venta Venta { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

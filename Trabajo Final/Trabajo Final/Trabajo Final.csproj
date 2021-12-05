@@ -140,12 +140,6 @@
     <Compile Include="Models\detalle_factura.cs">
       <DependentUpon>SPeedRacer.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Vehiculo.cs">
-      <DependentUpon>SPeedRacer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Venta.cs">
-      <DependentUpon>SPeedRacer.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\SPeedRacer.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -160,6 +154,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SPeedRacer.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vehiculo.cs">
+      <DependentUpon>SPeedRacer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venta.cs">
+      <DependentUpon>SPeedRacer.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
