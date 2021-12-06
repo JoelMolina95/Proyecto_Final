@@ -39,6 +39,8 @@ stock int not null,
 descripcion varchar(256) null,
 );
 
+drop table Vehiculo
+
 select *from Vehiculo
 
 select *from Cliente
@@ -82,5 +84,6 @@ FOREIGN KEY (idPersona) REFERENCES Cliente (id_Cliente)
 
 select * from detalle_factura
 
+drop table detalle_factura
 
 
