@@ -9,7 +9,7 @@ namespace Trabajo_Final.Services
 {
     interface Clientes
     {
-        void create(Cliente cliente);
+        void Create(Cliente cliente);
 
         void Delete(Cliente cliente);
 
@@ -21,4 +21,4 @@ namespace Trabajo_Final.Services
     }
 
 }
-}
+

@@ -1,12 +1,12 @@
 ﻿
 @{
     ViewBag.Title = "Home Page";
-    ViewData["AUTOS"] = "Coches deportivos";
+    ViewData["AUTOS"] = "Coches deportivos (CATALOGO)";
 }
 
 <h1>@ViewData["AUTOS"]</h1>
 
-<h4 style="color:red;">Hechales un ojoooo! Puede que aun tengamos el auto de tú sueño </h4>
+<h4 style="color:red;">Echales un vistazo! Puede que aun tengamos el auto de tú sueño </h4>
 @Html.ActionLink("INVENTARIO", "carros", "Carros", new { area = "" }, new { @class = "btn btn-info" })
 
 <section>

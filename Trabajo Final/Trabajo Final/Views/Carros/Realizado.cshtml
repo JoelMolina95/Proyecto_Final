@@ -1,0 +1,49 @@
+﻿@model Trabajo_Final.Models.Cliente
+@{
+    ViewBag.Title = "Index1";
+}
+<from>
+    @using (Html.BeginForm("Pago", "Carros", FormMethod.Post))
+    {
+
+        <label>INGRESE SU NOMBRE </label>
+        <br />
+        @Html.TextBoxFor(l => l.nombres)
+        <br />
+        <label>INGRESE SU APELLIDO </label>
+        <br />
+        @Html.TextBoxFor(l => l.apellidos)
+        <br />
+        <label>DEPARTAMENTO </label>
+        <br />
+        @Html.TextBoxFor(l => l.departamento)
+        <br />
+        <label>DIRECCION </label>
+        <br />
+        @Html.TextBoxFor(l => l.direccion)
+        <br />
+        <label>TELEFONO </label>
+        <br />
+        @Html.TextBoxFor(l => l.telefono)
+        <br />
+        <label>EMAIL </label>
+        <br />
+        @Html.TextBoxFor(l => l.email)
+        <br />
+        <label>TARJETA </label>
+        <br />
+        @Html.TextBoxFor(l => l.num_tarjeta)
+        <br />
+        <label>CVV </label>
+        <br />
+        @Html.TextBoxFor(l => l.CVV)
+        <br />
+        <label>FECHA DE VENCIMIENTO </label>
+        <br />
+        @Html.TextBoxFor(l => l.fecha_vencimiento)
+        <br />
+        <input type="submit" />
+
+    }
+</from>
+

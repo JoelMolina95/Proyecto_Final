@@ -19,7 +19,7 @@ namespace Trabajo_Final.Models
             : base("name=SPEED_RACEREntities")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

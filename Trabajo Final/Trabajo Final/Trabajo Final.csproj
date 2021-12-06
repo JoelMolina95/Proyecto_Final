@@ -238,9 +238,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Carros\Autos.cshtml" />
-    <Content Include="Views\Clientes\cliente.cshtml" />
     <Content Include="Views\Carros\carros.cshtml" />
+    <Content Include="Views\Clientes\Index1.cshtml" />
+    <Content Include="Views\Clientes\Realizado.cshtml" />
     <Content Include="Views\Carros\Pago.cshtml" />
+    <Content Include="Views\Carros\Realizado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

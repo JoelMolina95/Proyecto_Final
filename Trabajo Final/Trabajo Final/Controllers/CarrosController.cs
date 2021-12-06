@@ -19,10 +19,16 @@ namespace Trabajo_Final.Controllers
             return View();
         }
 
+        public ActionResult Realizado()
+        {
+            return View();
+        }
+
         public ActionResult Pago()
         {
             return View();
         }
+
         public ActionResult carros()
         {
             var listado = vehiculos.Lista_de_vehiculos();
@@ -38,8 +44,10 @@ namespace Trabajo_Final.Controllers
 
 
                 vehiculos.Delete(vehiculo);
-                return RedirectToAction("cliente");
+                return RedirectToAction("Realizado");
             }
+
+
 
         }
     }

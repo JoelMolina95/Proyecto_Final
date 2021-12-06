@@ -1,55 +1,65 @@
-﻿using System;
+﻿using Trabajo_Final.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using Trabajo_Final.Models;
 using Trabajo_Final.Services;
 
 namespace Trabajo_Final.Repository
 {
-
     public class ClsRClientes : Clientes
     {
         SPEED_RACEREntities auto_conect = new SPEED_RACEREntities();
 
-        public Cliente buscar(int IdClientes)
+        public Cliente buscar(int IdCliente)
         {
             throw new NotImplementedException();
         }
 
-        public void create(Cliente cliente)
+        public void Create(Cliente cliente)
         {
-            throw new NotImplementedException();
+            using (auto_conect)
+            {
+                try { 
+                
+                Cliente usuario = new Cliente();
+
+                usuario.nombres = cliente.nombres;
+                usuario.apellidos = cliente.apellidos;
+                usuario.departamento = cliente.departamento;
+                usuario.direccion = cliente.direccion;
+                usuario.telefono = cliente.telefono;
+                usuario.email = cliente.email;
+                usuario.num_tarjeta = cliente.num_tarjeta;
+                usuario.CVV = cliente.CVV;
+                usuario.fecha_vencimiento = cliente.fecha_vencimiento;
+                auto_conect.Cliente.Add(usuario);
+                auto_conect.SaveChanges();
+                }
+                catch(Exception ex) { }
+            }
         }
+        
 
         public void Delete(Cliente cliente)
         {
-            using (SPEED_RACEREntities conexionBd = new SPEED_RACEREntities())
-            {
-                cliente = conexionBd.Cliente.Find(cliente.id_Cliente);
-                conexionBd.Cliente.Remove(cliente);
-                conexionBd.SaveChanges();
-            }
+            throw new NotImplementedException();
         }
 
 
-        public List<Cliente> Lista_de_clientes()
+        public List<Cliente> Lista_de_Clientes()
         {
-
             var Lista = auto_conect.Cliente.ToList();
 
             return Lista;
         }
 
-        public List<Cliente> Lista_de_Clientes()
-        {
-            throw new NotImplementedException();
-        }
+
 
         public void Update(Cliente cliente)
         {
             throw new NotImplementedException();
         }
+
 
     }
 }

@@ -1,25 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Trabajo_Final.Repository;
 using Trabajo_Final.Models;
+using Trabajo_Final.Services;
 
 namespace Trabajo_Final.Controllers
 {
     public class ClientesController : Controller
     {
-        private SPEED_RACEREntities db = new SPEED_RACEREntities();
+        // GET: Estudiante
 
-        // GET: Clientes
-        public ActionResult Index()
+
+        ClsRClientes clsclientes = new ClsRClientes();
+        [HttpPost]
+        public ActionResult Create(Cliente cliente)
         {
-            return View(db.Cliente.ToList());
+            clsclientes.Create(cliente);
+            return RedirectToAction("Pago");
         }
 
-       
+
+
+        public ActionResult Index1()
+        {
+            return View();
+        }
     }
 }
