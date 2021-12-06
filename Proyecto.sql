@@ -35,7 +35,6 @@ modelo varchar(50) not null,
 color varchar (50) not null, 
 NumSerial Int not null,
 precio_venta money,
-stock int not null,
 descripcion varchar(256) null,
 );
 
