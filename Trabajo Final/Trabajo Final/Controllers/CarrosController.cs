@@ -38,7 +38,7 @@ namespace Trabajo_Final.Controllers
 
 
                 vehiculos.Delete(vehiculo);
-                return RedirectToAction("pago");
+                return RedirectToAction("cliente");
             }
 
         }

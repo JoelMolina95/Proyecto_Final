@@ -5,6 +5,7 @@
 
 <h2 style="color:red;">Estos son los vehiculos disponibles</h2>
 <h4 style="color:darkgreen;">¡Espero encuentres el que te intereso!</h4>
+@Html.ActionLink("ATRAS", "Autos", "Carros", new { area = "" }, new { @class = "btn btn-secondary" })
 <table class="table table-striped">
     @foreach (var racer in Model)
     {
@@ -29,9 +30,13 @@
             <td style="border: 2px solid black;">@racer.NumSerial </td>
             <td style="border: 2px solid black;">@racer.precio_venta </td>
             <td style="border: 2px solid black;">@racer.descripcion </td>
+
             <td style="border: 2px solid black;" class="btn btn-success ">@Html.ActionLink("Comprar", "Delete", new { id = racer.IdVehiculo }) </td>
+
         </tr>
 
     }
 </table>
-             
+
+@Html.ActionLink("Volver arriba", "carros", "Carros", new { area = "" }, new { @class = "btn btn-info" })
+
