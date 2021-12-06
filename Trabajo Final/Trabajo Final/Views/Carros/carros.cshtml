@@ -4,32 +4,32 @@
 }
 
 <h2 style="color:red;">Estos son los vehiculos disponibles</h2>
-<h4 style="color:blue;">¡Espero encuentres el que te intereso!</h4>
+<h4 style="color:darkgreen;">¡Espero encuentres el que te intereso!</h4>
 <table class="table table-striped">
     @foreach (var racer in Model)
     {
 
         <thead class="table-bordered">
-        <th>   Id   </th>
-        <th>   Marca     </th>
-        <th>   Modelo   </th>
-        <th>   Color    </th>
-        <th>   NumSerial  </th>
-        <th>   Precio_Venta  </th>
-        <th>   Descripcion  </th>
-        <th style="color:red;"> Acción </th>
+        <th style="border: 2px solid #2C3E50 ">   Id   </th>
+        <th style="border: 2px solid #2C3E50">     Marca     </th>
+        <th style="border: 2px solid #2C3E50">    Modelo   </th>
+        <th style="border: 2px solid #2C3E50">      Color    </th>
+        <th style="border: 2px solid #2C3E50">     NumSerial  </th>
+        <th style="border: 2px solid #2C3E50">    Precio_Venta  </th>
+        <th style="border: 2px solid #2C3E50">       Descripcion  </th>
+        <th style="border: 2px solid #2C3E50">    Acción </th>
         </thead>
 
 
         <tr>
-            <td>@racer.IdVehiculo</td>
-            <td>@racer.Marca </td>
-            <td>@racer.modelo </td>
-            <td>@racer.color </td>
-            <td>@racer.NumSerial </td>
-            <td>@racer.precio_venta </td>
-            <td>@racer.descripcion </td>
-            <td class="btn btn-success">@Html.ActionLink("Comprar", "Delete", new { id = racer.IdVehiculo }) </td>
+            <td style="border: 2px solid black;">@racer.IdVehiculo</td>
+            <td style="border: 2px solid black;">@racer.Marca </td>
+            <td style="border: 2px solid black;">@racer.modelo </td>
+            <td style="border: 2px solid black;">@racer.color </td>
+            <td style="border: 2px solid black;">@racer.NumSerial </td>
+            <td style="border: 2px solid black;">@racer.precio_venta </td>
+            <td style="border: 2px solid black;">@racer.descripcion </td>
+            <td style="border: 2px solid black;" class="btn btn-success ">@Html.ActionLink("Comprar", "Delete", new { id = racer.IdVehiculo }) </td>
         </tr>
 
     }
