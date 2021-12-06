@@ -34,60 +34,68 @@ textarea {
 }
 
 .caja2 {
-    top: -375px;
+    top: -335px;
     left: 330px;
     position: relative;
 }
 
 .caja3 {
-    top: -765px;
+    top: -680px;
     left: 660px;
     position: relative;
 }
 
 .caja4 {
-    top: -700px;
+    top: -650px;
+    
     left: 0px;
     position: relative;
 }
 
 .cajaa5 {
-    top: -1100px;
+    top: -1010px;
     left: 330px;
     right: 0px;
     position: relative;
 }
 
 .cajaa6 {
-    top: -1496px;
+    top: -1360px;
     left: 660px;
     right: 0px;
     position: relative;
 }
 .cajaa7 {
-    top: -1430px;
+    top: -1280px;
     left: 0px;
     right: 0px;
     position: relative;
 }
 
 .cajaa8 {
-    top: -1830px;
+    top: -1640px;
     left: 330px;
     right: 0px;
     position: relative;
 }
 
 .cajaa9 {
-    top: -2230px;
+    top: -1995px;
     left: 660px;
     right: 0px;
     position: relative;
 }
 
 .cajaa10 {
-    top: -2150px;
+    top: -1920px;
     left: 0px;
+    right: 0px;
+    position: relative;
+}
+
+.cajaa11 {
+    top: -2300px;
+    left: 350px;
     right: 0px;
     position: relative;
 }

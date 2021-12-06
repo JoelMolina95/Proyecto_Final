@@ -18,7 +18,6 @@ namespace Trabajo_Final.Models
         public int idVenta { get; set; }
         public int idArticulo { get; set; }
         public int idPersona { get; set; }
-        public int cantidad { get; set; }
         public decimal precio { get; set; }
     
         public virtual Cliente Cliente { get; set; }

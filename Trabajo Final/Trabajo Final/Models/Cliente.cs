@@ -28,7 +28,7 @@ namespace Trabajo_Final.Models
         public string direccion { get; set; }
         public int telefono { get; set; }
         public string email { get; set; }
-        public decimal num_tarjeta { get; set; }
+        public long num_tarjeta { get; set; }
         public int CVV { get; set; }
         public string fecha_vencimiento { get; set; }
     

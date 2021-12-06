@@ -3,12 +3,35 @@
     ViewBag.Title = "carros";
 }
 
-<h2>carros</h2>
+<h4 style="color:red;">Estos son los vehiculos disponibles</h4>
+<h6 style="color:blue;">¡Espero encuentres el que te intereso!</h6>
+<table class="table table-striped">
+    @foreach (var racer in Model)
+    {
 
-@foreach(var racer in Model)
-            {
-              <tr>
-                  <td> @racer.Marca
-                  </td>
-                  </tr>
-            }
+        <thead>
+        <th>   Id   </th>
+        <th>   Marca     </th>
+        <th>   Modelo   </th>
+        <th>   Color    </th>
+        <th>   NumSerial  </th>
+        <th>   Precio_Venta  </th>
+        <th>   Descripcion  </th>
+        <th>   Acciones  </th>
+        </thead>
+
+
+        <tr>
+            <td>@racer.IdVehiculo</td>
+            <td>@racer.Marca </td>
+            <td>@racer.modelo </td>
+            <td>@racer.color </td>
+            <td>@racer.NumSerial </td>
+            <td>@racer.precio_venta </td>
+            <td>@racer.descripcion </td>
+            <td>@Html.ActionLink("Comprar", "Delete", new { id = racer.IdVehiculo }) </td>
+        </tr>
+
+    }
+</table>
+             

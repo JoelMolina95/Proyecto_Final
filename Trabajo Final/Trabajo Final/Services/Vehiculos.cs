@@ -7,18 +7,21 @@ using Trabajo_Final.Models;
 
 namespace Trabajo_Final.Services
 {
-    internal interface Vehiculos
-    {
-
-        List<Vehiculo> Lista_de_vehiculos();
-
+    interface Vehiculos
+    { 
         void create(Vehiculo vehiculo);
 
         void Delete(Vehiculo vehiculo);
 
         void Update(Vehiculo vehiculo);
 
-         Vehiculo buscar (int IdVehiculo);
+        Vehiculo buscar (int IdVehiculo);
+
+        List<Vehiculo> Lista_de_vehiculos();
     }
 
 }
+
+
+
+

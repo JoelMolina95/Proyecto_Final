@@ -16,7 +16,7 @@
           <Property Name="direccion" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="telefono" Type="int" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="num_tarjeta" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="num_tarjeta" Type="bigint" Nullable="false" />
           <Property Name="CVV" Type="int" Nullable="false" />
           <Property Name="fecha_vencimiento" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -28,18 +28,7 @@
           <Property Name="idVenta" Type="int" Nullable="false" />
           <Property Name="idArticulo" Type="int" Nullable="false" />
           <Property Name="idPersona" Type="int" Nullable="false" />
-          <Property Name="cantidad" Type="int" Nullable="false" />
           <Property Name="precio" Type="decimal" Precision="11" Scale="2" Nullable="false" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Vehiculo">
           <Key>
@@ -51,7 +40,6 @@
           <Property Name="color" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="NumSerial" Type="int" Nullable="false" />
           <Property Name="precio_venta" Type="money" />
-          <Property Name="stock" Type="int" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="256" />
         </EntityType>
         <EntityType Name="Venta">
@@ -65,7 +53,7 @@
           <Property Name="impuesto" Type="decimal" Precision="4" Scale="2" Nullable="false" />
           <Property Name="total" Type="decimal" Precision="11" Scale="2" Nullable="false" />
         </EntityType>
-        <Association Name="FK__detalle_f__idArt__440B1D61">
+        <Association Name="FK__detalle_f__idArt__4D94879B">
           <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="1" />
           <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -77,7 +65,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__detalle_f__idPer__44FF419A">
+        <Association Name="FK__detalle_f__idPer__4E88ABD4">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
           <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -89,7 +77,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__detalle_f__idVen__4316F928">
+        <Association Name="FK__detalle_f__idVen__4CA06362">
           <End Role="Venta" Type="Self.Venta" Multiplicity="1" />
           <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -101,7 +89,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Venta__idCliente__2A4B4B5E">
+        <Association Name="FK__Venta__idCliente__49C3F6B7">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
           <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -116,22 +104,21 @@
         <EntityContainer Name="SPEED_RACERModelStoreContainer">
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="detalle_factura" EntityType="Self.detalle_factura" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__detalle_f__idArt__440B1D61" Association="Self.FK__detalle_f__idArt__440B1D61">
+          <AssociationSet Name="FK__detalle_f__idArt__4D94879B" Association="Self.FK__detalle_f__idArt__4D94879B">
             <End Role="Vehiculo" EntitySet="Vehiculo" />
             <End Role="detalle_factura" EntitySet="detalle_factura" />
           </AssociationSet>
-          <AssociationSet Name="FK__detalle_f__idPer__44FF419A" Association="Self.FK__detalle_f__idPer__44FF419A">
+          <AssociationSet Name="FK__detalle_f__idPer__4E88ABD4" Association="Self.FK__detalle_f__idPer__4E88ABD4">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="detalle_factura" EntitySet="detalle_factura" />
           </AssociationSet>
-          <AssociationSet Name="FK__detalle_f__idVen__4316F928" Association="Self.FK__detalle_f__idVen__4316F928">
+          <AssociationSet Name="FK__detalle_f__idVen__4CA06362" Association="Self.FK__detalle_f__idVen__4CA06362">
             <End Role="Venta" EntitySet="Venta" />
             <End Role="detalle_factura" EntitySet="detalle_factura" />
           </AssociationSet>
-          <AssociationSet Name="FK__Venta__idCliente__2A4B4B5E" Association="Self.FK__Venta__idCliente__2A4B4B5E">
+          <AssociationSet Name="FK__Venta__idCliente__49C3F6B7" Association="Self.FK__Venta__idCliente__49C3F6B7">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
@@ -143,22 +130,21 @@
         <EntityContainer Name="SPEED_RACEREntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cliente" EntityType="SPEED_RACERModel.Cliente" />
           <EntitySet Name="detalle_factura" EntityType="SPEED_RACERModel.detalle_factura" />
-          <EntitySet Name="sysdiagrams" EntityType="SPEED_RACERModel.sysdiagrams" />
           <EntitySet Name="Vehiculo" EntityType="SPEED_RACERModel.Vehiculo" />
           <EntitySet Name="Venta" EntityType="SPEED_RACERModel.Venta" />
-          <AssociationSet Name="FK__detalle_f__idPer__44FF419A" Association="SPEED_RACERModel.FK__detalle_f__idPer__44FF419A">
+          <AssociationSet Name="FK__detalle_f__idPer__4E88ABD4" Association="SPEED_RACERModel.FK__detalle_f__idPer__4E88ABD4">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="detalle_factura" EntitySet="detalle_factura" />
           </AssociationSet>
-          <AssociationSet Name="FK__Venta__idCliente__2A4B4B5E" Association="SPEED_RACERModel.FK__Venta__idCliente__2A4B4B5E">
+          <AssociationSet Name="FK__Venta__idCliente__49C3F6B7" Association="SPEED_RACERModel.FK__Venta__idCliente__49C3F6B7">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
-          <AssociationSet Name="FK__detalle_f__idArt__440B1D61" Association="SPEED_RACERModel.FK__detalle_f__idArt__440B1D61">
+          <AssociationSet Name="FK__detalle_f__idArt__4D94879B" Association="SPEED_RACERModel.FK__detalle_f__idArt__4D94879B">
             <End Role="Vehiculo" EntitySet="Vehiculo" />
             <End Role="detalle_factura" EntitySet="detalle_factura" />
           </AssociationSet>
-          <AssociationSet Name="FK__detalle_f__idVen__4316F928" Association="SPEED_RACERModel.FK__detalle_f__idVen__4316F928">
+          <AssociationSet Name="FK__detalle_f__idVen__4CA06362" Association="SPEED_RACERModel.FK__detalle_f__idVen__4CA06362">
             <End Role="Venta" EntitySet="Venta" />
             <End Role="detalle_factura" EntitySet="detalle_factura" />
           </AssociationSet>
@@ -174,11 +160,11 @@
           <Property Name="direccion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="telefono" Type="Int32" Nullable="false" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="num_tarjeta" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="num_tarjeta" Type="Int64" Nullable="false" />
           <Property Name="CVV" Type="Int32" Nullable="false" />
           <Property Name="fecha_vencimiento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idPer__44FF419A" FromRole="Cliente" ToRole="detalle_factura" />
-          <NavigationProperty Name="Venta" Relationship="SPEED_RACERModel.FK__Venta__idCliente__2A4B4B5E" FromRole="Cliente" ToRole="Venta" />
+          <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idPer__4E88ABD4" FromRole="Cliente" ToRole="detalle_factura" />
+          <NavigationProperty Name="Venta" Relationship="SPEED_RACERModel.FK__Venta__idCliente__49C3F6B7" FromRole="Cliente" ToRole="Venta" />
         </EntityType>
         <EntityType Name="detalle_factura">
           <Key>
@@ -188,21 +174,10 @@
           <Property Name="idVenta" Type="Int32" Nullable="false" />
           <Property Name="idArticulo" Type="Int32" Nullable="false" />
           <Property Name="idPersona" Type="Int32" Nullable="false" />
-          <Property Name="cantidad" Type="Int32" Nullable="false" />
           <Property Name="precio" Type="Decimal" Nullable="false" Precision="11" Scale="2" />
-          <NavigationProperty Name="Cliente" Relationship="SPEED_RACERModel.FK__detalle_f__idPer__44FF419A" FromRole="detalle_factura" ToRole="Cliente" />
-          <NavigationProperty Name="Vehiculo" Relationship="SPEED_RACERModel.FK__detalle_f__idArt__440B1D61" FromRole="detalle_factura" ToRole="Vehiculo" />
-          <NavigationProperty Name="Venta" Relationship="SPEED_RACERModel.FK__detalle_f__idVen__4316F928" FromRole="detalle_factura" ToRole="Venta" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Cliente" Relationship="SPEED_RACERModel.FK__detalle_f__idPer__4E88ABD4" FromRole="detalle_factura" ToRole="Cliente" />
+          <NavigationProperty Name="Vehiculo" Relationship="SPEED_RACERModel.FK__detalle_f__idArt__4D94879B" FromRole="detalle_factura" ToRole="Vehiculo" />
+          <NavigationProperty Name="Venta" Relationship="SPEED_RACERModel.FK__detalle_f__idVen__4CA06362" FromRole="detalle_factura" ToRole="Venta" />
         </EntityType>
         <EntityType Name="Vehiculo">
           <Key>
@@ -214,9 +189,8 @@
           <Property Name="color" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NumSerial" Type="Int32" Nullable="false" />
           <Property Name="precio_venta" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="stock" Type="Int32" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idArt__440B1D61" FromRole="Vehiculo" ToRole="detalle_factura" />
+          <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idArt__4D94879B" FromRole="Vehiculo" ToRole="detalle_factura" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
@@ -228,10 +202,10 @@
           <Property Name="fecha_hora" Type="DateTime" Precision="3" />
           <Property Name="impuesto" Type="Decimal" Nullable="false" Precision="4" Scale="2" />
           <Property Name="total" Type="Decimal" Nullable="false" Precision="11" Scale="2" />
-          <NavigationProperty Name="Cliente" Relationship="SPEED_RACERModel.FK__Venta__idCliente__2A4B4B5E" FromRole="Venta" ToRole="Cliente" />
-          <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idVen__4316F928" FromRole="Venta" ToRole="detalle_factura" />
+          <NavigationProperty Name="Cliente" Relationship="SPEED_RACERModel.FK__Venta__idCliente__49C3F6B7" FromRole="Venta" ToRole="Cliente" />
+          <NavigationProperty Name="detalle_factura" Relationship="SPEED_RACERModel.FK__detalle_f__idVen__4CA06362" FromRole="Venta" ToRole="detalle_factura" />
         </EntityType>
-        <Association Name="FK__detalle_f__idPer__44FF419A">
+        <Association Name="FK__detalle_f__idPer__4E88ABD4">
           <End Type="SPEED_RACERModel.Cliente" Role="Cliente" Multiplicity="1" />
           <End Type="SPEED_RACERModel.detalle_factura" Role="detalle_factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -243,7 +217,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Venta__idCliente__2A4B4B5E">
+        <Association Name="FK__Venta__idCliente__49C3F6B7">
           <End Type="SPEED_RACERModel.Cliente" Role="Cliente" Multiplicity="1" />
           <End Type="SPEED_RACERModel.Venta" Role="Venta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -255,7 +229,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__detalle_f__idArt__440B1D61">
+        <Association Name="FK__detalle_f__idArt__4D94879B">
           <End Type="SPEED_RACERModel.Vehiculo" Role="Vehiculo" Multiplicity="1" />
           <End Type="SPEED_RACERModel.detalle_factura" Role="detalle_factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -267,7 +241,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__detalle_f__idVen__4316F928">
+        <Association Name="FK__detalle_f__idVen__4CA06362">
           <End Type="SPEED_RACERModel.Venta" Role="Venta" Multiplicity="1" />
           <End Type="SPEED_RACERModel.detalle_factura" Role="detalle_factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -305,7 +279,6 @@
             <EntityTypeMapping TypeName="SPEED_RACERModel.detalle_factura">
               <MappingFragment StoreEntitySet="detalle_factura">
                 <ScalarProperty Name="precio" ColumnName="precio" />
-                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
                 <ScalarProperty Name="idPersona" ColumnName="idPersona" />
                 <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
                 <ScalarProperty Name="idVenta" ColumnName="idVenta" />
@@ -313,22 +286,10 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="SPEED_RACERModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Vehiculo">
             <EntityTypeMapping TypeName="SPEED_RACERModel.Vehiculo">
               <MappingFragment StoreEntitySet="Vehiculo">
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="stock" ColumnName="stock" />
                 <ScalarProperty Name="precio_venta" ColumnName="precio_venta" />
                 <ScalarProperty Name="NumSerial" ColumnName="NumSerial" />
                 <ScalarProperty Name="color" ColumnName="color" />

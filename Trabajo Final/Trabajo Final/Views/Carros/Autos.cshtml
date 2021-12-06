@@ -6,7 +6,8 @@
 
 <h1>@ViewData["AUTOS"]</h1>
 
-<h4 style="color:red;">Bienvenido al paraiso! ¡ Uff mira eso papaaa! </h4>
+<h4 style="color:red;">Hechales un ojoooo! Puede que aun tengamos el auto de tú sueño </h4>
+@Html.ActionLink("INVENTARIO", "carros", "Carros", new { area = "" }, new { @class = "btn btn-success" })
 
 <section>
 
@@ -18,10 +19,6 @@
                 <h5 class="card-title">Chevrolet Camaro-SS</h5>
                 <h6 class="list-group-item">Precio: $1,148,400 </h6>
                 <p class="card-text">455 Caballos de potencia, Transmision automatica de 10 velocidades.</p>
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
-
                 <p> </p>
 
                 <form action="https://es.chevrolet.com/camaro-life/camaro-sports-car/ss">
@@ -47,19 +44,15 @@
                 <h6 class="list-group-item">Precio: $2,640,000 </h6>
                 <p class="card-text">Velocidad máxima: 336 km/h, Consumo de combustible: 3,4 km/l en ciudad y 5,1 km/l en ruta</p>
                 <div class="nav-item">
-                    <div class="nav-item">
-                        @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                    </div>
-
                     <p> </p>
 
                     <form action="https://auto.idoneos.com/ferrari/ferrari_enzo/">
                         <button type="submit">Mas información</button>
                     </form>
                 </div>
-        </div>
+            </div>
 
-    </div>
+        </div>
 
 </section>
 
@@ -73,9 +66,6 @@
                 <h5 class="card-title">Lamborghini-Aventador-Coupé</h5>
                 <h6 class="list-group-item">Precio: $422,290 </h6>
                 <p class="card-text">Tiene un motor V12 de gasolina de 770 CV,un cambio automático de siete relaciones 0 a 100 km: 2.9s</p>
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
                 <p> </p>
 
                 <form action="https://www.km77.com/coches/lamborghini/aventador/2012/coupe/s/aventador-s/datos">
@@ -98,10 +88,6 @@
                 <h5 class="card-title">Ford-Mustang-GT</h5>
                 <h6 class="list-group-item">Precio: $50,205 </h6>
                 <p class="card-text">Tiene un motor de 533 caballos de potencia, tracción trasera y caja de cambios automática.</p>
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
-
                 <p> </p>
 
                 <form action="https://www.km77.com/coches/ford/mustang/2015/fastback/gt/mustang-coupe-50-ti-vct-v8/datos">
@@ -124,10 +110,6 @@
                 <h5 class="card-title">Nissan-GTR</h5>
                 <h6 class="list-group-item">Precio: $113,540 </h6>
                 <p class="card-text">Motor V6 DOHC turbocargado doble de 3.8 litros y 24 válvulas, con transmisión integrante de eje transversal independiente </p>
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
-
                 <p> </p>
 
                 <form action="https://es.nissanusa.com/vehicles/sports-cars/gt-r/specs/compare-specs.html#modelName=Premium|Transmisi%C3%B3n%20autom%C3%A1tica%20de%206%20velocidades%20con%20doble%20clutch">
@@ -150,10 +132,6 @@
                 <h5 class="card-title">Audi-R8</h5>
                 <h6 class="list-group-item">Precio: $1,150,400 </h6>
                 <p class="card-text">El Audi R8 cuenta con un motor V10 de 5.2 litros con el que alcanza una velocidad máxima de 330 km/h. Sistema de frenado Nissan/Brembo  </p>
-
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
 
                 <p> </p>
 
@@ -178,10 +156,6 @@
                 <h6 class="list-group-item">Precio: $49,000 </h6>
                 <p class="card-text">El Tesla Model 3 es una berlina de dimensiones compactas y 100% eléctrica del segmento D, fabricada por Tesla desde 2016 y que se comercializa en España desde finales de 2018. </p>
 
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
-
                 <p> </p>
 
                 <form action="https://www.tesla.com/es_mx/model3?redirect=no">
@@ -204,10 +178,6 @@
                 <h5 class="card-title">Ferrary 612</h5>
                 <h6 class="list-group-item">Precio: $240,952 </h6>
                 <p class="card-text">con un motor de gasolina, una cilindrada de 5,7 l y 540 CV de potencia. Caja de cambios automática de seis velocidades de tracción trasera, alcanza una velocidad de 320 km/h y acelerar de 0 a 100 km/h en 4,2 segundos.  </p>
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
-
                 <p> </p>
 
                 <form action="https://noticias.coches.com/ferrari-612-scaglietti-2004">
@@ -230,11 +200,6 @@
                 <h5 class="card-title">BMW_M340i</h5>
                 <h6 class="list-group-item">Precio: $83,422.92 </h6>
                 <p class="card-text">Caja automática de ocho velocidades, con convertidor de par. Tracción integral permanente.  Acelera de 0 a 100 km/h en 4,4 segundos y su velocidad máxima está limitada a 250 km/h.   </p>
-
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
-
                 <p> </p>
 
                 <form action="https://ar.motor1.com/news/480368/lanzamiento-bmw-m340i-xdrive/">
@@ -258,11 +223,6 @@
                 <h5 class="card-title">Ford Mustang GT500 (2020)</h5>
                 <h6 class="list-group-item">Precio: $73,995  </h6>
                 <p class="card-text">Ford Shelby GT500 monta un potente Motor 5.2L V8 Supercargado de 760HP que entrega la aceleración más rápida en un Mustang de calle. ¡Ponte al volante y libera el poder de este icono de los Muscle Car Americanos! </p>
-
-                <div class="nav-item">
-                    @Html.ActionLink("Comprar", "Create", "Clientes", new { area = "" }, new { @class = "btn btn-success" })
-                </div>
-
                 <p> </p>
 
                 <form action="https://www.ford.mx/performance/shelby-gt500/2020/">
@@ -275,3 +235,13 @@
 
 </section>
 
+<section>
+    <div class="cajaa11">
+        <div class="nav-item">
+            <h4 style="color:darkred">TE INTERESO ALGUNO DE ESTOS COCHES?</h4>
+            @Html.ActionLink("INVENTARIO", "carros", "Carros", new { area = "" }, new { @class = "btn btn-success" })
+            <h6 style="color:chartreuse">hechale un ojo puede que aun tengamos ese vehiculo</h6>
+        </div>
+    </div>
+
+</section>

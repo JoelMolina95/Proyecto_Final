@@ -27,7 +27,6 @@ namespace Trabajo_Final.Models
     
         public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<detalle_factura> detalle_factura { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Vehiculo> Vehiculo { get; set; }
         public virtual DbSet<Venta> Venta { get; set; }
     }

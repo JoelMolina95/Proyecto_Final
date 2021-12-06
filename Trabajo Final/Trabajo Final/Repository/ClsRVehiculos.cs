@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Trabajo_Final.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using Trabajo_Final.Models;
 using Trabajo_Final.Services;
 
 namespace Trabajo_Final.Repository
 {
     public class ClsRVehiculos : Vehiculos
-    {SPEED_RACEREntities auto_conect=new SPEED_RACEREntities();
+    {
+        SPEED_RACEREntities auto_conect=new SPEED_RACEREntities();
         public Vehiculo buscar(int IdVehiculo)
         {
             throw new NotImplementedException();
@@ -21,8 +21,14 @@ namespace Trabajo_Final.Repository
 
         public void Delete(Vehiculo vehiculo)
         {
-            throw new NotImplementedException();
+            using (SPEED_RACEREntities conexionBd = new SPEED_RACEREntities())
+            {
+                vehiculo = conexionBd.Vehiculo.Find(vehiculo.IdVehiculo);
+                conexionBd.Vehiculo.Remove(vehiculo);
+                conexionBd.SaveChanges();
+            }
         }
+
 
         public List<Vehiculo> Lista_de_vehiculos()
         {
@@ -37,6 +43,10 @@ namespace Trabajo_Final.Repository
             throw new NotImplementedException();
         }
 
+        internal void Comprar(Vehiculo  vehiculo)
+        {
+            throw new NotImplementedException();
+        }
 
     }
 }
