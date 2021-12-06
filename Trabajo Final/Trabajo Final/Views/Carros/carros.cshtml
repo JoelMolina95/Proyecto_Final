@@ -3,13 +3,13 @@
     ViewBag.Title = "carros";
 }
 
-<h4 style="color:red;">Estos son los vehiculos disponibles</h4>
-<h6 style="color:blue;">¡Espero encuentres el que te intereso!</h6>
+<h2 style="color:red;">Estos son los vehiculos disponibles</h2>
+<h4 style="color:blue;">¡Espero encuentres el que te intereso!</h4>
 <table class="table table-striped">
     @foreach (var racer in Model)
     {
 
-        <thead>
+        <thead class="table-bordered">
         <th>   Id   </th>
         <th>   Marca     </th>
         <th>   Modelo   </th>
@@ -17,7 +17,7 @@
         <th>   NumSerial  </th>
         <th>   Precio_Venta  </th>
         <th>   Descripcion  </th>
-        <th>   Acciones  </th>
+        <th style="color:red;"> Acción </th>
         </thead>
 
 
@@ -29,7 +29,7 @@
             <td>@racer.NumSerial </td>
             <td>@racer.precio_venta </td>
             <td>@racer.descripcion </td>
-            <td>@Html.ActionLink("Comprar", "Delete", new { id = racer.IdVehiculo }) </td>
+            <td class="btn btn-success">@Html.ActionLink("Comprar", "Delete", new { id = racer.IdVehiculo }) </td>
         </tr>
 
     }
