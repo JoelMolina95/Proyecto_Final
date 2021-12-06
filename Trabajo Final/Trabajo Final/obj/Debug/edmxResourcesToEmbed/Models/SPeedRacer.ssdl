@@ -60,7 +60,7 @@
     <Property Name="impuesto" Type="decimal" Precision="4" Scale="2" Nullable="false" />
     <Property Name="total" Type="decimal" Precision="11" Scale="2" Nullable="false" />
   </EntityType>
-  <Association Name="FK__detalle_f__idArt__32E0915F">
+  <Association Name="FK__detalle_f__idArt__440B1D61">
     <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="1" />
     <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
     <ReferentialConstraint>
@@ -72,7 +72,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__detalle_f__idPer__33D4B598">
+  <Association Name="FK__detalle_f__idPer__44FF419A">
     <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
     <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
     <ReferentialConstraint>
@@ -84,7 +84,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__detalle_f__idVen__31EC6D26">
+  <Association Name="FK__detalle_f__idVen__4316F928">
     <End Role="Venta" Type="Self.Venta" Multiplicity="1" />
     <End Role="detalle_factura" Type="Self.detalle_factura" Multiplicity="*" />
     <ReferentialConstraint>
@@ -114,15 +114,15 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__detalle_f__idArt__32E0915F" Association="Self.FK__detalle_f__idArt__32E0915F">
+    <AssociationSet Name="FK__detalle_f__idArt__440B1D61" Association="Self.FK__detalle_f__idArt__440B1D61">
       <End Role="Vehiculo" EntitySet="Vehiculo" />
       <End Role="detalle_factura" EntitySet="detalle_factura" />
     </AssociationSet>
-    <AssociationSet Name="FK__detalle_f__idPer__33D4B598" Association="Self.FK__detalle_f__idPer__33D4B598">
+    <AssociationSet Name="FK__detalle_f__idPer__44FF419A" Association="Self.FK__detalle_f__idPer__44FF419A">
       <End Role="Cliente" EntitySet="Cliente" />
       <End Role="detalle_factura" EntitySet="detalle_factura" />
     </AssociationSet>
-    <AssociationSet Name="FK__detalle_f__idVen__31EC6D26" Association="Self.FK__detalle_f__idVen__31EC6D26">
+    <AssociationSet Name="FK__detalle_f__idVen__4316F928" Association="Self.FK__detalle_f__idVen__4316F928">
       <End Role="Venta" EntitySet="Venta" />
       <End Role="detalle_factura" EntitySet="detalle_factura" />
     </AssociationSet>

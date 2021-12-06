@@ -10,10 +10,10 @@
         <EntityTypeShape EntityType="SPEED_RACERModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="SPEED_RACERModel.Vehiculo" Width="1.5" PointX="3" PointY="2.375" />
         <EntityTypeShape EntityType="SPEED_RACERModel.Venta" Width="1.5" PointX="3" PointY="6.375" />
-        <AssociationConnector Association="SPEED_RACERModel.FK__detalle_f__idPer__33D4B598" />
+        <AssociationConnector Association="SPEED_RACERModel.FK__detalle_f__idPer__44FF419A" />
         <AssociationConnector Association="SPEED_RACERModel.FK__Venta__idCliente__2A4B4B5E" />
-        <AssociationConnector Association="SPEED_RACERModel.FK__detalle_f__idArt__32E0915F" />
-        <AssociationConnector Association="SPEED_RACERModel.FK__detalle_f__idVen__31EC6D26" />
+        <AssociationConnector Association="SPEED_RACERModel.FK__detalle_f__idArt__440B1D61" />
+        <AssociationConnector Association="SPEED_RACERModel.FK__detalle_f__idVen__4316F928" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
